@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Equipment\BaseEquip.cs" />
+    <Compile Include="Equipment\Meinberg\Converter.cs" />
+    <Compile Include="Equipment\Meinberg\SDU.cs" />
+    <Compile Include="Equipment\Meinberg\Server.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
