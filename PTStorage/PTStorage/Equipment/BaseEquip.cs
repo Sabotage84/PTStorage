@@ -19,6 +19,6 @@ namespace PTStorage.Equipment
         private double price;
         string description;
         double entryPrice;
-        double coeffsicient;
+        double coefficient;
     }
 }
