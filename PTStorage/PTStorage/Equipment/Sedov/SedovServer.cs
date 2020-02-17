@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTStorage.Equipment.Cable
+namespace PTStorage.Equipment.Sedov
 {
-    class Cable:BaseEquip
+    class SedovServer:BaseEquip
     {
-        public Cable()
+        public SedovServer()
         {
-                
+
         }
-        public Cable(string name, string description, double ePrice, double price)
+        public SedovServer(string name, string description, double ePrice, double price)
         {
             Name = name;
             Description = description;
@@ -20,7 +20,5 @@ namespace PTStorage.Equipment.Cable
             Price = price;
             Coefficient = Price / EntryPrice;
         }
-        
-        
     }
 }
