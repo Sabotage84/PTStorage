@@ -42,15 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Equipment\Antenna\Antenna.cs" />
     <Compile Include="Equipment\BaseEquip.cs" />
+    <Compile Include="Equipment\Cable\Cable.cs" />
+    <Compile Include="Equipment\Clock\Clock.cs" />
     <Compile Include="Equipment\Meinberg\Converter.cs" />
+    <Compile Include="Equipment\Meinberg\Receiver.cs" />
     <Compile Include="Equipment\Meinberg\SDU.cs" />
     <Compile Include="Equipment\Meinberg\Server.cs" />
+    <Compile Include="Equipment\Sedov\SedovServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,5 +20,19 @@ namespace PTStorage.Equipment
         string description;
         double entryPrice;
         double coefficient;
+
+        public BaseEquip(string name, string description, double ePrice, double price)
+        {
+            Name = name;
+            Description = description;
+            EntryPrice = ePrice;
+            Price = price;
+            Coefficient = Price / EntryPrice;
+        }
+
+        public BaseEquip()
+        {
+
+        }
     }
 }

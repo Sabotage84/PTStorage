@@ -12,13 +12,9 @@ namespace PTStorage.Equipment.Cable
         {
                 
         }
-        public Cable(string name, string description, double ePrice, double price)
+        public Cable(string name, string description, double ePrice, double price) : base(name, description, ePrice, price)
         {
-            Name = name;
-            Description = description;
-            EntryPrice = ePrice;
-            Price = price;
-            Coefficient = Price / EntryPrice;
+           
         }
         
         

@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Meinberg
 {
-    class Server : BaseEquip
+    class Receiver:BaseEquip
     {
+        public Receiver()
+        {
+                
+        }
+        public Receiver(string name, string description, double ePrice, double price) : base(name, description, ePrice, price)
+        {
 
-        protected Server()
-        {
         }
-        public Server(string name, string description, double ePrice, double price) : base(name, description, ePrice, price)
-        {
-            
-        }
+        
     }
 }
