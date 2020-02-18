@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment
 {
-    abstract class BaseEquip
+    public abstract class BaseEquip
     {
         
         public string Name { get => name; set => name = value; }

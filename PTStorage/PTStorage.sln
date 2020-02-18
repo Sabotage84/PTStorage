@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTStorage", "PTStorage\PTStorage.csproj", "{A1F74380-83D4-41BA-A996-CD23914D2A39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{1F489885-F356-4B8E-AB2F-2708948BAD5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A1F74380-83D4-41BA-A996-CD23914D2A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1F74380-83D4-41BA-A996-CD23914D2A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1F74380-83D4-41BA-A996-CD23914D2A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F489885-F356-4B8E-AB2F-2708948BAD5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F489885-F356-4B8E-AB2F-2708948BAD5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F489885-F356-4B8E-AB2F-2708948BAD5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F489885-F356-4B8E-AB2F-2708948BAD5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

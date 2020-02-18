@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Meinberg
 {
-    class Server : BaseEquip
+    public class Server : BaseEquip
     {
 
-        protected Server()
+        public Server()
         {
         }
         public Server(string name, string description, double ePrice, double price) : base(name, description, ePrice, price)
