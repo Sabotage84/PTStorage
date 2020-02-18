@@ -1,6 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PTStorage.Equipment.Meinberg; 
+using PTStorage.Equipment.Meinberg;
+using PTStorage.Equipment.Antenna;
+using PTStorage.Equipment.Cable;
+using PTStorage.Equipment.Clock;
+using PTStorage.Equipment.Sedov;
 
 namespace UnitTests
 {
@@ -12,6 +16,12 @@ namespace UnitTests
         {
             Server server=new Server();
             SDU sdu = new SDU();
+            Converter converter = new Converter();
+            Receiver receiver = new Receiver();
+            SedovServer sedovServer = new SedovServer();
+            Clock clock = new Clock();
+            Cable cable = new Cable();
+            Antenna antenna = new Antenna();
         }
     }
 }
