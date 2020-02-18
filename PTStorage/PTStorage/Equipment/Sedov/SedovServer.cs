@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Sedov
 {
-    class SedovServer:BaseEquip
+    public class SedovServer:BaseEquip
     {
         public SedovServer()
         {

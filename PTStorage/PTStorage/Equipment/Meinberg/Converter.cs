@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Meinberg
 {
-    class Converter:BaseEquip
+    public class Converter:BaseEquip
     {
         public Converter()
         {

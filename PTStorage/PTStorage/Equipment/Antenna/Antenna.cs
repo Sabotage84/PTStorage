@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Antenna
 {
-    class Antenna:BaseEquip
+    public class Antenna:BaseEquip
     {
         public Antenna()
         {

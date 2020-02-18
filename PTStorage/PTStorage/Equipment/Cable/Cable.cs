@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Cable
 {
-    class Cable:BaseEquip
+    public class Cable:BaseEquip
     {
         public Cable()
         {

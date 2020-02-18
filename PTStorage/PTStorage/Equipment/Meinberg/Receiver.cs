@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Meinberg
 {
-    class Receiver:BaseEquip
+    public class Receiver:BaseEquip
     {
         public Receiver()
         {

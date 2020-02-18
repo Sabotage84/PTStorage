@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment.Clock
 {
-    class Clock:BaseEquip
+    public class Clock:BaseEquip
     {
         public Clock()
         {
