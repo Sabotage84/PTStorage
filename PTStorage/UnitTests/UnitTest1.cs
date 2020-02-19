@@ -12,7 +12,7 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void CreateElemetsTest()
+        public void CreateEmptyElemetsTest()
         {
             Server server=new Server();
             SDU sdu = new SDU();
@@ -23,5 +23,90 @@ namespace UnitTests
             Cable cable = new Cable();
             Antenna antenna = new Antenna();
         }
+
+        [TestMethod]
+        public void CreateParametrizedSetrverTest()
+        {
+            Server server = new Server("Test","SimpleTest",2,8);
+            Assert.AreEqual("Test", server.Name);
+            Assert.AreEqual("SimpleTest", server.Description);
+            Assert.AreEqual(2, server.EntryPrice);
+            Assert.AreEqual(8, server.Price);
+            Assert.AreEqual(4, server.Coefficient);
+        }
+
+        [TestMethod]
+        public void CreateParametrizedSDUTest()
+        {
+            SDU testEl = new SDU("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+
+        [TestMethod]
+        public void CreateParametrizedConverterTest()
+        {
+            Converter testEl = new Converter("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+        [TestMethod]
+        public void CreateParametrizedReceiverTest()
+        {
+            Receiver testEl = new Receiver("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+        [TestMethod]
+        public void CreateParametrizedSedovSetrverTest()
+        {
+            SedovServer testEl = new SedovServer("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+        [TestMethod]
+        public void CreateParametrizedClockTest()
+        {
+            Clock testEl = new Clock("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+        [TestMethod]
+        public void CreateParametrizedCableTest()
+        {
+            Cable testEl = new Cable("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+        [TestMethod]
+        public void CreateParametrizedAntennaTest()
+        {
+            Antenna testEl = new Antenna("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
+        }
+
+
     }
 }
