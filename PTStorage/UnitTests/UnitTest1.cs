@@ -107,6 +107,21 @@ namespace UnitTests
             Assert.AreEqual(4, testEl.Coefficient);
         }
 
+        [TestMethod]
+        public void VerificationConstructorTest()
+        {
+            Server server = new Server("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual(false, server.PossibilityOfVerification);
+            server=new Server("Test", "SimpleTest", 2, 8, true);
+            Assert.AreEqual(true, server.PossibilityOfVerification);
+
+            SedovServer sedovServer = new SedovServer("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual(false, sedovServer.PossibilityOfVerification);
+            sedovServer = new SedovServer("Test", "SimpleTest", 2, 8, true);
+            Assert.AreEqual(true, sedovServer.PossibilityOfVerification);
+
+        }
+
 
     }
 }

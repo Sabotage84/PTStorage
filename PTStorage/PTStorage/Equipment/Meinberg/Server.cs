@@ -13,10 +13,7 @@ namespace PTStorage.Equipment.Meinberg
         public Server()
         {
         }
-        public Server(string name, string description, double ePrice, double price) : base(name, description, ePrice, price)
-        {
-            
-        }
+        
         public Server(string name, string description, double ePrice, double price, bool verification=false) : base(name, description, ePrice, price)
         {
             PossibilityOfVerification = verification;
