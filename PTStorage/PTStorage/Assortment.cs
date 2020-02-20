@@ -1,4 +1,5 @@
-﻿using PTStorage.Equipment.Antenna;
+﻿using PTStorage.Equipment;
+using PTStorage.Equipment.Antenna;
 using PTStorage.Equipment.Cable;
 using PTStorage.Equipment.Clock;
 using PTStorage.Equipment.Meinberg;
@@ -13,7 +14,7 @@ namespace PTStorage
 {
     public class Assortment
     {
-        List<Server> servsrs;
+        List<Server> servers;
         List<Antenna> antennas;
         List<Cable> cables;
         List<Clock> clocks;
@@ -24,7 +25,7 @@ namespace PTStorage
 
         public Assortment()
         {
-            servsrs = new List<Server>();
+            servers = new List<Server>();
             antennas = new List<Antenna>();
             cables = new List<Cable>();
             clocks = new List<Clock>();
@@ -33,6 +34,14 @@ namespace PTStorage
             sdus = new List<SDU>();
             sedovServers = new List<SedovServer>();
 
+        }
+
+        public void AddElement(BaseEquip eq)
+        {
+            if (eq is Server)
+            {
+                servers.Add((Server)eq);
+            }
         }
 
     }
