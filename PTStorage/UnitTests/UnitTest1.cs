@@ -9,7 +9,7 @@ using PTStorage.Equipment.Sedov;
 namespace UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class EqClassesTest
     {
         [TestMethod]
         public void CreateEmptyElemetsTest()

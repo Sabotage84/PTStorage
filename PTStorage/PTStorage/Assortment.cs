@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage
 {
-    class Assortment
+    public class Assortment
     {
         List<Server> servsrs;
         List<Antenna> antennas;
