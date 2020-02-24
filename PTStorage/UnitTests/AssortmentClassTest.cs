@@ -12,5 +12,7 @@ namespace UnitTests
         {
             Assortment assortment = new Assortment();
         }
+
+
     }
 }

@@ -42,6 +42,34 @@ namespace PTStorage
             {
                 servers.Add((Server)eq);
             }
+            else if(eq is Antenna)
+            {
+                antennas.Add((Antenna)eq);
+            }
+            else if (eq is Cable)
+            {
+                cables.Add((Cable)eq);
+            }
+            else if(eq is Clock)
+            {
+                clocks.Add((Clock)eq);
+            }
+            else if (eq is Converter)
+            {
+                converters.Add((Converter)eq);
+            }
+            else if (eq is Receiver)
+            {
+                receivers.Add((Receiver)eq);
+            }
+            else if(eq is SDU)
+            {
+                sdus.Add((SDU)eq);
+            }
+            else if (eq is SedovServer)
+            {
+                sedovServers.Add((SedovServer)eq);
+            }
         }
 
     }
