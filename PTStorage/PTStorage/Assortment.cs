@@ -14,14 +14,14 @@ namespace PTStorage
 {
     public class Assortment
     {
-        List<Server> servers;
-        List<Antenna> antennas;
-        List<Cable> cables;
-        List<Clock> clocks;
-        List<Converter> converters;
-        List<Receiver> receivers;
-        List<SDU> sdus;
-        List<SedovServer> sedovServers;
+        public List<Server> servers;
+        public List<Antenna> antennas;
+        public List<Cable> cables;
+        public List<Clock> clocks;
+        public List<Converter> converters;
+        public List<Receiver> receivers;
+        public List<SDU> sdus;
+        public List<SedovServer> sedovServers;
 
         public Assortment()
         {
