@@ -47,8 +47,6 @@ namespace UnitTests
 
             assortment.AddElement(new SedovServer());
             Assert.AreEqual(1, assortment.SedovServers.Count);
-
-
         }
 
     }
