@@ -14,61 +14,70 @@ namespace PTStorage
 {
     public class Assortment
     {
-        public List<Server> servers;
-        public List<Antenna> antennas;
-        public List<Cable> cables;
-        public List<Clock> clocks;
-        public List<Converter> converters;
-        public List<Receiver> receivers;
-        public List<SDU> sdus;
-        public List<SedovServer> sedovServers;
+        List<Server> servers;
+        List<Antenna> antennas;
+        List<Cable> cables;
+        List<Clock> clocks;
+        List<Converter> converters;
+        List<Receiver> receivers;
+        List<SDU> sdus;
+        List<SedovServer> sedovServers;
 
         public Assortment()
         {
-            servers = new List<Server>();
-            antennas = new List<Antenna>();
-            cables = new List<Cable>();
-            clocks = new List<Clock>();
-            converters = new List<Converter>();
-            receivers = new List<Receiver>();
-            sdus = new List<SDU>();
-            sedovServers = new List<SedovServer>();
+            Servers = new List<Server>();
+            Antennas = new List<Antenna>();
+            Cables = new List<Cable>();
+            Clocks = new List<Clock>();
+            Converters = new List<Converter>();
+            Receivers = new List<Receiver>();
+            Sdus = new List<SDU>();
+            SedovServers = new List<SedovServer>();
 
         }
+
+        public List<Server> Servers { get => servers; set => servers = value; }
+        public List<Antenna> Antennas { get => antennas; set => antennas = value; }
+        public List<Cable> Cables { get => cables; set => cables = value; }
+        public List<Clock> Clocks { get => clocks; set => clocks = value; }
+        public List<Converter> Converters { get => converters; set => converters = value; }
+        public List<Receiver> Receivers { get => receivers; set => receivers = value; }
+        public List<SDU> Sdus { get => sdus; set => sdus = value; }
+        public List<SedovServer> SedovServers { get => sedovServers; set => sedovServers = value; }
 
         public void AddElement(BaseEquip eq)
         {
             if (eq is Server)
             {
-                servers.Add((Server)eq);
+                Servers.Add((Server)eq);
             }
             else if(eq is Antenna)
             {
-                antennas.Add((Antenna)eq);
+                Antennas.Add((Antenna)eq);
             }
             else if (eq is Cable)
             {
-                cables.Add((Cable)eq);
+                Cables.Add((Cable)eq);
             }
             else if(eq is Clock)
             {
-                clocks.Add((Clock)eq);
+                Clocks.Add((Clock)eq);
             }
             else if (eq is Converter)
             {
-                converters.Add((Converter)eq);
+                Converters.Add((Converter)eq);
             }
             else if (eq is Receiver)
             {
-                receivers.Add((Receiver)eq);
+                Receivers.Add((Receiver)eq);
             }
             else if(eq is SDU)
             {
-                sdus.Add((SDU)eq);
+                Sdus.Add((SDU)eq);
             }
             else if (eq is SedovServer)
             {
-                sedovServers.Add((SedovServer)eq);
+                SedovServers.Add((SedovServer)eq);
             }
         }
 
