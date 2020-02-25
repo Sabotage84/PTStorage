@@ -8,12 +8,23 @@ namespace PTStorage
 {
     public static class PreName
     {
-        static readonly string STV = "Сервер точного времени ";
-        static readonly string USCHV = "Устройство синхронизации частоты и времени ";
-        static readonly string RECEIVER = "Устройство синхронизации ";
-        static readonly string CABLE = "Антенный кабель ";
-        static readonly string SDUPlus = @"Устройство синхронизации размножитель/конвертер ";
-        static readonly string CLOCK = "Цифвые часы - дисплей времени ";
-        
+        static readonly string sTV = "Сервер точного времени ";
+        static readonly string uSCHV = "Устройство синхронизации частоты и времени ";
+        static readonly string rECEIVER = "Устройство синхронизации ";
+        static readonly string cABLE = "Антенный кабель ";
+        static readonly string sDUPlus = @"Устройство синхронизации размножитель/конвертер ";
+        static readonly string cLOCK = "Цифвые часы - дисплей времени ";
+
+        public static string STV => sTV;
+
+        public static string USCHV => uSCHV;
+
+        public static string RECEIVER => rECEIVER;
+
+        public static string CABLE => cABLE;
+
+        public static string SDUPlus => sDUPlus;
+
+        public static string CLOCK => cLOCK;
     }
 }

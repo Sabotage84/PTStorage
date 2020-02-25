@@ -53,7 +53,9 @@ namespace PTStorage
             {
                 Server sv = (Server)eq;
                 if (sv.PossibilityOfVerification)
-                    sv.Name = "" + sv.Name;
+                    sv.Name = PreName.USCHV + sv.Name;
+                else
+                    sv.Name = PreName.STV + sv.Name;
                 Servers.Add(sv);
                 Servers.Sort();
             }
