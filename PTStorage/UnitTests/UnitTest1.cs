@@ -23,6 +23,7 @@ namespace UnitTests
             Clock clock = new Clock();
             Cable cable = new Cable();
             Antenna antenna = new Antenna();
+            Misc misc = new Misc();
         }
 
         [TestMethod]

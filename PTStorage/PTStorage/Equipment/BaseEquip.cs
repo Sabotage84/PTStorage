@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Equipment
 {
-    public abstract class BaseEquip
+    public abstract class BaseEquip:IComparable
     {
         
         public string Name { get => name; set => name = value; }
@@ -33,6 +33,17 @@ namespace PTStorage.Equipment
         public BaseEquip()
         {
 
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null) return 1;
+
+            BaseEquip otherEq = obj as BaseEquip;
+            if (otherEq != null)
+                return this.Name.CompareTo(otherEq.Name);
+            else
+                throw new ArgumentException("Object is not a Temperature");
         }
     }
 }

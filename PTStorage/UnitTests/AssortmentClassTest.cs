@@ -49,5 +49,38 @@ namespace UnitTests
             Assert.AreEqual(1, assortment.SedovServers.Count);
         }
 
+        [TestMethod]
+        public void PreNameTest()
+        {
+            Assortment assortment = new Assortment();
+
+            assortment.AddElement(new Server("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.STV+"Test", assortment.Servers[0].Name);
+
+            assortment.AddElement(new Server("Test", "SimpleTest", 2, 8, true));
+            Assert.AreEqual(PreName.USCHV + "Test", assortment.Servers[1].Name);
+
+            assortment.AddElement(new Antenna("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.ANTENNA + "Test", assortment.Antennas[0].Name);
+
+            assortment.AddElement(new Cable("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.CABLE + "Test", assortment.Cables[0].Name);
+
+            assortment.AddElement(new Clock("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.CLOCK + "Test", assortment.Clocks[0].Name);
+
+            assortment.AddElement(new Converter("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.SDUPlus + "Test", assortment.Converters[0].Name);
+
+            assortment.AddElement(new Receiver("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.RECEIVER + "Test", assortment.Receivers[0].Name);
+
+            assortment.AddElement(new SDU("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.SDUPlus + "Test", assortment.Sdus[0].Name);
+
+            assortment.AddElement(new SedovServer("Test", "SimpleTest", 2, 8));
+            Assert.AreEqual(PreName.STV + "Test", assortment.SedovServers[0].Name);
+        }
+
     }
 }

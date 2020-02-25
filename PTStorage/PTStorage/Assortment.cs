@@ -3,6 +3,7 @@ using PTStorage.Equipment.Antenna;
 using PTStorage.Equipment.Cable;
 using PTStorage.Equipment.Clock;
 using PTStorage.Equipment.Meinberg;
+using PTStorage.Equipment.Misc;
 using PTStorage.Equipment.Sedov;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace PTStorage
         List<Receiver> receivers;
         List<SDU> sdus;
         List<SedovServer> sedovServers;
+        List<Misc> miscs;
 
 
 
@@ -35,6 +37,7 @@ namespace PTStorage
             Receivers = new List<Receiver>();
             Sdus = new List<SDU>();
             SedovServers = new List<SedovServer>();
+            Miscs = new List<Misc>();
 
         }
 
@@ -46,6 +49,7 @@ namespace PTStorage
         public List<Receiver> Receivers { get => receivers; set => receivers = value; }
         public List<SDU> Sdus { get => sdus; set => sdus = value; }
         public List<SedovServer> SedovServers { get => sedovServers; set => sedovServers = value; }
+        public List<Misc> Miscs { get => miscs; set => miscs = value; }
 
         public void AddElement(BaseEquip eq)
         {
@@ -61,40 +65,52 @@ namespace PTStorage
             }
             else if(eq is Antenna)
             {
+                eq.Name = PreName.ANTENNA + eq.Name;
                 Antennas.Add((Antenna)eq);
                 Antennas.Sort();
             }
             else if (eq is Cable)
             {
+                eq.Name = PreName.CABLE + eq.Name;
                 Cables.Add((Cable)eq);
                 Cables.Sort();
             }
             else if(eq is Clock)
             {
+                eq.Name = PreName.CLOCK + eq.Name;
                 Clocks.Add((Clock)eq);
                 Clocks.Sort();
             }
             else if (eq is Converter)
             {
+                eq.Name = PreName.SDUPlus + eq.Name;
                 Converters.Add((Converter)eq);
                 Converters.Sort();
             }
             else if (eq is Receiver)
             {
+                eq.Name = PreName.RECEIVER + eq.Name;
                 Receivers.Add((Receiver)eq);
                 Receivers.Sort();
             }
             else if(eq is SDU)
             {
+                eq.Name = PreName.SDUPlus + eq.Name;
                 Sdus.Add((SDU)eq);
                 Sdus.Sort();
             }
             else if (eq is SedovServer)
             {
+                eq.Name = PreName.STV + eq.Name;
                 SedovServers.Add((SedovServer)eq);
                 SedovServers.Sort();
             }
-            
+            else
+            {
+                Miscs.Add((Misc)eq);
+                Miscs.Sort();
+            }
+
         }
 
     }
