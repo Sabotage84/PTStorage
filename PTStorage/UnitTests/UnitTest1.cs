@@ -5,6 +5,7 @@ using PTStorage.Equipment.Antenna;
 using PTStorage.Equipment.Cable;
 using PTStorage.Equipment.Clock;
 using PTStorage.Equipment.Sedov;
+using PTStorage.Equipment.Misc;
 
 namespace UnitTests
 {
@@ -120,6 +121,17 @@ namespace UnitTests
             sedovServer = new SedovServer("Test", "SimpleTest", 2, 8, true);
             Assert.AreEqual(true, sedovServer.PossibilityOfVerification);
 
+        }
+
+        [TestMethod]
+        public void CreateParametrizedMiscTest()
+        {
+            Misc testEl = new Misc("Test", "SimpleTest", 2, 8);
+            Assert.AreEqual("Test", testEl.Name);
+            Assert.AreEqual("SimpleTest", testEl.Description);
+            Assert.AreEqual(2, testEl.EntryPrice);
+            Assert.AreEqual(8, testEl.Price);
+            Assert.AreEqual(4, testEl.Coefficient);
         }
 
 

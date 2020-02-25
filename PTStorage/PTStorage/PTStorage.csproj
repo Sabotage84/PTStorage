@@ -57,6 +57,7 @@
     <Compile Include="Equipment\Meinberg\Receiver.cs" />
     <Compile Include="Equipment\Meinberg\SDU.cs" />
     <Compile Include="Equipment\Meinberg\Server.cs" />
+    <Compile Include="Equipment\Misc\Misc.cs" />
     <Compile Include="Equipment\Sedov\SedovServer.cs" />
     <Compile Include="PreName.cs" />
     <Compile Include="Program.cs" />

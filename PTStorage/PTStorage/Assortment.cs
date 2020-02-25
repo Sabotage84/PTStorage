@@ -94,6 +94,7 @@ namespace PTStorage
                 SedovServers.Add((SedovServer)eq);
                 SedovServers.Sort();
             }
+            
         }
 
     }
