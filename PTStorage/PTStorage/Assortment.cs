@@ -23,6 +23,8 @@ namespace PTStorage
         List<SDU> sdus;
         List<SedovServer> sedovServers;
 
+
+
         public Assortment()
         {
             Servers = new List<Server>();
@@ -49,7 +51,10 @@ namespace PTStorage
         {
             if (eq is Server)
             {
-                Servers.Add((Server)eq);
+                Server sv = (Server)eq;
+                if (sv.PossibilityOfVerification)
+                    sv.Name = "" + sv.Name;
+                Servers.Add(sv);
                 Servers.Sort();
             }
             else if(eq is Antenna)
