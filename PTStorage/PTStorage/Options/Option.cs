@@ -24,8 +24,9 @@ namespace PTStorage.Options
         public Option(string name, int count)
         { 
             Count = count;
+            ShortName = name;
             if (Count<2)
-                ShortName = name;
+                FullName = name;
             else
             {
                 if (ShortName == "LNE" || ShortName == "GE")
