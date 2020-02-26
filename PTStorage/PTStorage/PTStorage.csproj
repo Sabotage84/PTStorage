@@ -59,6 +59,7 @@
     <Compile Include="Equipment\Meinberg\Server.cs" />
     <Compile Include="Equipment\Misc\Misc.cs" />
     <Compile Include="Equipment\Sedov\SedovServer.cs" />
+    <Compile Include="Options\Option.cs" />
     <Compile Include="PreName.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
