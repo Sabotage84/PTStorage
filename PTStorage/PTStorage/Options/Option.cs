@@ -21,12 +21,17 @@ namespace PTStorage.Options
 
         }
 
-        public Option(string name, int count)
+        public Option(string name, int count=1)
         { 
             Count = count;
             ShortName = name;
-            if (Count<2)
-                FullName = name;
+            if (Count < 2)
+            {
+                if (ShortName == "TC")
+                    FullName = ShortName + "-" + Count + "-" + Count;
+                else
+                    FullName = ShortName;
+            }
             else
             {
                 if (ShortName == "LNE" || ShortName == "GE")

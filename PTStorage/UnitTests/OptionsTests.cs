@@ -19,6 +19,8 @@ namespace UnitTests
             Assert.AreEqual("3GE", op.FullName);
             op = new Option("FS", 2);
             Assert.AreEqual("FS-2", op.FullName);
+            op = new Option("TC");
+            Assert.AreEqual("TC-1-1", op.FullName);
         }
     }
 }
