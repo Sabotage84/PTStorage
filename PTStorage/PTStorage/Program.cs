@@ -12,6 +12,7 @@ namespace PTStorage
         static void Main(string[] args)
         {
             OptionManager.TestMeth();
+            OptionManager.SaveAllOptions();
             Console.ReadKey();
         }
     }
