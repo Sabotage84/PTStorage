@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PTStorage.Options;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace PTStorage
     {
         static void Main(string[] args)
         {
+            OptionManager.TestMeth();
+            Console.ReadKey();
         }
     }
 }

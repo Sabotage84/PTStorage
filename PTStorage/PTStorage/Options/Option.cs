@@ -8,6 +8,7 @@ namespace PTStorage.Options
 {
     public class Option
     {
+        public int ID;
         string shortName;
         int count;
         string fullName;
