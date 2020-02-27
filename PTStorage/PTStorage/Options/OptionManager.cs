@@ -19,9 +19,9 @@ namespace PTStorage.Options
 
         static void LoadAllOptions()
         {
-            OptionsContext db = new OptionsContext();
+           
 
-            List<Option> o = db.optionsDB.ToList();
+            
         }
         public static void TestMeth()
         {
