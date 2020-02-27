@@ -22,5 +22,13 @@ namespace UnitTests
             op = new Option("TC");
             Assert.AreEqual("TC-1-1", op.FullName);
         }
+
+        [TestMethod]
+        public void OptionLoadTest()
+        {
+            OptionManager.TestMeth();
+            Assert.AreEqual(3, OptionManager.AllOptions.Count);
+        }
+
     }
 }

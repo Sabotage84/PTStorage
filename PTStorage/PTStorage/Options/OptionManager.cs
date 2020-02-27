@@ -29,12 +29,11 @@ namespace PTStorage.Options
                 AllOptions = (List<Option>)formatter.Deserialize(fs);
             }
 
-            AllOptions.Add(new Option("GE", 3));
+            
         }
 
         static public void SaveAllOptions()
         {
-            // получаем поток, куда будем записывать сериализованный объект
             using (FileStream fs = new FileStream("options.xml", FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, AllOptions);
