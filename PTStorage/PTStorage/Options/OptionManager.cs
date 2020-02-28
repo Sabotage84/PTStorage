@@ -65,9 +65,18 @@ namespace PTStorage.Options
 
         static public void SaveAllOptions()
         {
-            using (FileStream fs = new FileStream("options.xml", FileMode.OpenOrCreate))
+            try
             {
-                formatter.Serialize(fs, AllOptions);
+                using (FileStream fs = new FileStream("options.xml", FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(fs, AllOptions);
+                }
+            }
+            catch
+            {
+#if DEBUG
+                Console.WriteLine("Can not serialize alloptions");
+#endif
             }
         }
 
