@@ -34,7 +34,7 @@ namespace UnitTests
         public void OptionLoadWithotFileTest()
         {
             OptionManager.TestMeth();
-            Assert.AreEqual(12, OptionManager.AllOptions.Count);
+            Assert.AreEqual(16, OptionManager.AllOptions.Count);
         }
 
 
