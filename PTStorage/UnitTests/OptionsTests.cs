@@ -30,5 +30,13 @@ namespace UnitTests
             Assert.AreEqual(3, OptionManager.AllOptions.Count);
         }
 
+        [TestMethod]
+        public void OptionLoadWithotFileTest()
+        {
+            OptionManager.TestMeth();
+            Assert.AreEqual(12, OptionManager.AllOptions.Count);
+        }
+
+
     }
 }
