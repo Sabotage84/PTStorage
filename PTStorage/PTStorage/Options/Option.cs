@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Options
 {
-    public class Option
+    public class Optsion
     {
         public int ID;
         string shortName;
@@ -57,5 +57,14 @@ namespace PTStorage.Options
             //return base.Equals(obj);
         }
 
+        public override int GetHashCode()
+        {
+            var hashCode = 1111060993;
+            hashCode = hashCode * -1521134295 + ID.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(shortName);
+            hashCode = hashCode * -1521134295 + count.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(fullName);
+            return hashCode;
+        }
     }
 }
