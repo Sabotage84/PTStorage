@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Options
 {
-    public class Optsion
+    public class Option
     {
         public int ID;
         string shortName;
@@ -54,7 +54,7 @@ namespace PTStorage.Options
             }
             else
                 return false;
-            //return base.Equals(obj);
+            
         }
 
         public override int GetHashCode()
