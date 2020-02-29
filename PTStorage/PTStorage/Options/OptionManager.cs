@@ -85,5 +85,18 @@ namespace PTStorage.Options
             Console.WriteLine("test from option manager");
         }
 
+        static void AddOption(Option op)
+        {
+            if (AllOptions.Contains(op))
+            {
+#if DEBUG
+                Console.WriteLine("Option already in list!");
+#endif
+
+            }
+            else
+                AllOptions.Add(op);
+        }
+
     }
 }
