@@ -37,6 +37,17 @@ namespace UnitTests
             Assert.AreEqual(16, OptionManager.AllOptions.Count);
         }
 
+        [TestMethod]
+        public void AddOptionTest()
+        {
+            OptionManager.TestMeth();
+            int t = OptionManager.AllOptions.Count;
+            OptionManager.AddOption(new Option("GNS-HQ"));
+            Assert.AreEqual(t+1, OptionManager.AllOptions.Count);
+            OptionManager.AddOption(new Option("GNS-HQ"));
+            Assert.AreEqual(t + 1, OptionManager.AllOptions.Count);
+        }
+
 
     }
 }
