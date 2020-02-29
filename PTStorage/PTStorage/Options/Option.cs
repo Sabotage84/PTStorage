@@ -44,6 +44,18 @@ namespace PTStorage.Options
             }
            
         }
-        
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Option)
+            {
+                Option op = (Option)obj;
+                return FullName.Equals(op.FullName);
+            }
+            else
+                return false;
+            //return base.Equals(obj);
+        }
+
     }
 }
