@@ -98,5 +98,12 @@ namespace PTStorage.Options
                 AllOptions.Add(op);
         }
 
+        public static void RemoveOption(string fullName)
+        {
+           int count= allOptions.RemoveAll(x => x.FullName == fullName);
+#if DEBUG
+            Console.WriteLine("{0} element(s) deleted");
+#endif
+        }
     }
 }
