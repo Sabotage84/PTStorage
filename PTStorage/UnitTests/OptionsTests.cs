@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PTStorage.Options;
 
@@ -27,7 +28,7 @@ namespace UnitTests
         public void OptionLoadTest()
         {
             OptionManager.TestMeth();
-            Assert.AreEqual(3, OptionManager.AllOptions.Count);
+            Assert.AreEqual(6, OptionManager.AllOptions.Count);
         }
 
         //[TestMethod]
@@ -58,6 +59,14 @@ namespace UnitTests
             Assert.AreEqual(t + 1, OptionManager.AllOptions.Count);
             OptionManager.RemoveOption("GNS-HQ");
             Assert.AreEqual(t, OptionManager.AllOptions.Count);
+        }
+
+        [TestMethod]
+        public void FindAllOptionTest()
+        {
+            OptionManager.TestMeth();
+            List<Option> t= OptionManager.FindAllOptionsLike("TC");
+            Assert.AreEqual(3, t.Count);
         }
 
     }
