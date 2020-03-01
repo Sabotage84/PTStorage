@@ -8,10 +8,10 @@ using System.Xml.Serialization;
 
 namespace PTStorage.Options
 {
-[Serializable]
+    [Serializable]
     public static class OptionManager
     {
-        
+
         static List<Option> allOptions;
         static XmlSerializer formatter = new XmlSerializer(typeof(List<Option>));
         static OptionManager()
@@ -22,7 +22,7 @@ namespace PTStorage.Options
 
         public static List<Option> AllOptions { get => allOptions; set => allOptions = value; }
 
-        static void LoadAllOptions(string filename= "options.xml")
+        static void LoadAllOptions(string filename = "options.xml")
         {
             try
             {
@@ -39,21 +39,21 @@ namespace PTStorage.Options
                 LoadDefaultOptions();
             }
 
-            
+
         }
 
         private static void LoadDefaultOptions()
         {
             AllOptions.Add(new Option("TC"));
-            AllOptions.Add(new Option("TC",2));
-            AllOptions.Add(new Option("TC",3));
-            AllOptions.Add(new Option("TC",4));
+            AllOptions.Add(new Option("TC", 2));
+            AllOptions.Add(new Option("TC", 3));
+            AllOptions.Add(new Option("TC", 4));
             AllOptions.Add(new Option("LNE"));
-            AllOptions.Add(new Option("LNE",2));
+            AllOptions.Add(new Option("LNE", 2));
             AllOptions.Add(new Option("FS"));
-            AllOptions.Add(new Option("FS",2));
-            AllOptions.Add(new Option("FS",3));
-            AllOptions.Add(new Option("FS",4));
+            AllOptions.Add(new Option("FS", 2));
+            AllOptions.Add(new Option("FS", 3));
+            AllOptions.Add(new Option("FS", 4));
             AllOptions.Add(new Option("PS"));
             AllOptions.Add(new Option("PS", 2));
             AllOptions.Add(new Option("PS", 3));
@@ -100,10 +100,15 @@ namespace PTStorage.Options
 
         public static void RemoveOption(string fullName)
         {
-           int count= allOptions.RemoveAll(x => x.FullName == fullName);
+            int count = allOptions.RemoveAll(x => x.FullName == fullName);
 #if DEBUG
             Console.WriteLine("{0} element(s) deleted");
 #endif
+        }
+
+        public static List<Option>  FindAllOptionsLike(string shortName)
+        {
+            return AllOptions.FindAll(x => x.ShortName.Contains(shortName));
         }
     }
 }
