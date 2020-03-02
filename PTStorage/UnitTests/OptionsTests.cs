@@ -78,5 +78,16 @@ namespace UnitTests
             Assert.AreEqual("test", t.FullName);
         }
 
-    }
+        [TestMethod]
+        public void GetFullOptionNameTest()
+        {
+            OptionManager.TestMeth();
+            List<Option> t = new List<Option>();
+            t.Add(OptionManager.GetOption("TC-2-2"));
+            t.Add(OptionManager.GetOption("LNE"));
+            string s= OptionManager.GetFullOptionName(t);
+            Assert.AreEqual(@"TC-2-2/LNE/", s);
+        }
+
+}
 }

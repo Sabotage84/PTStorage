@@ -121,7 +121,7 @@ namespace PTStorage.Options
             string res = "";
             foreach (var item in options)
             {
-                res += item.FullName + "//";
+                res += item.FullName + "/";
             }
             return res;
         }
