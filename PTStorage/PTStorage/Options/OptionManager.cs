@@ -110,5 +110,10 @@ namespace PTStorage.Options
         {
             return AllOptions.FindAll(x => x.ShortName.Contains(shortName));
         }
+
+        public static Option GetOption(string fullName)
+        {
+            return AllOptions.Find(x => x.FullName == fullName);
+        }
     }
 }
