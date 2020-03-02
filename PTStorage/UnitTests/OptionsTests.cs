@@ -69,5 +69,15 @@ namespace UnitTests
             Assert.AreEqual(3, t.Count);
         }
 
+        [TestMethod]
+        public void FindOptionTest()
+        {
+            OptionManager.TestMeth();
+            OptionManager.AddOption(new Option("test"));
+
+            Option t = OptionManager.GetOption("test");
+            Assert.AreEqual("test", t.FullName);
+        }
+
     }
 }
