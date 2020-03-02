@@ -74,7 +74,6 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             OptionManager.AddOption(new Option("test"));
-
             Option t = OptionManager.GetOption("test");
             Assert.AreEqual("test", t.FullName);
         }

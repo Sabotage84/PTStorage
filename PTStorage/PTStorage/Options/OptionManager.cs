@@ -115,5 +115,15 @@ namespace PTStorage.Options
         {
             return AllOptions.Find(x => x.FullName == fullName);
         }
+
+        public static string GetFullOptionName(List<Option> options)
+        {
+            string res = "";
+            foreach (var item in options)
+            {
+                res += item.FullName + "//";
+            }
+            return res;
+        }
     }
 }
