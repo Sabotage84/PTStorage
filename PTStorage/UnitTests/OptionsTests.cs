@@ -28,7 +28,7 @@ namespace UnitTests
         public void OptionLoadTest()
         {
             OptionManager.TestMeth();
-            Assert.AreEqual(6, OptionManager.AllOptions.Count);
+            Assert.AreEqual(10, OptionManager.AllOptions.Count);
         }
 
         //[TestMethod]
@@ -43,11 +43,11 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             int t = OptionManager.AllOptions.Count;
-            OptionManager.AddOption(new Option("GNS-HQ",1000));
+            OptionManager.AddOption(new Option("GNS-DHQ",1000));
             Assert.AreEqual(t+1, OptionManager.AllOptions.Count);
-            OptionManager.AddOption(new Option("GNS-HQ",1000));
+            OptionManager.AddOption(new Option("GNS-DHQ",1000));
             Assert.AreEqual(t + 1, OptionManager.AllOptions.Count);
-            OptionManager.RemoveOption("GNS-HQ");
+            OptionManager.RemoveOption("GNS-DHQ");
         }
 
         [TestMethod]
@@ -55,9 +55,9 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             int t = OptionManager.AllOptions.Count;
-            OptionManager.AddOption(new Option("GNS-HQ",1000));
+            OptionManager.AddOption(new Option("GNS-DHQ",1000));
             Assert.AreEqual(t + 1, OptionManager.AllOptions.Count);
-            OptionManager.RemoveOption("GNS-HQ");
+            OptionManager.RemoveOption("GNS-DHQ");
             Assert.AreEqual(t, OptionManager.AllOptions.Count);
         }
 
@@ -83,11 +83,14 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             List<Option> t = new List<Option>();
+            t.Add(OptionManager.GetOption("AD10-AD10"));
+            t.Add(OptionManager.GetOption("GNS-HQ"));
             t.Add(OptionManager.GetOption("TC-2-2"));
             t.Add(OptionManager.GetOption("LNE"));
+
             t.Sort();
             string s= OptionManager.GetFullOptionName(t);
-            Assert.AreEqual(@"LNE/TC-2-2", s);
+            Assert.AreEqual(@"GNS-HQ/LNE/TC-2-2/AD10-AD10", s);
         }
 
 }
