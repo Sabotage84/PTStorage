@@ -73,7 +73,7 @@ namespace PTStorage.Options
             if (obj is Option)
             {
                 Option t = (Option)obj;
-                return t.ID - ID;
+                return ID-  t.ID;
             }
             else
                 throw new ArgumentException();
