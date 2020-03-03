@@ -87,7 +87,6 @@ namespace UnitTests
             t.Add(OptionManager.GetOption("GNS-HQ"));
             t.Add(OptionManager.GetOption("TC-2-2"));
             t.Add(OptionManager.GetOption("LNE"));
-
             t.Sort();
             string s= OptionManager.GetFullOptionName(t);
             Assert.AreEqual(@"GNS-HQ/LNE/TC-2-2/AD10-AD10", s);

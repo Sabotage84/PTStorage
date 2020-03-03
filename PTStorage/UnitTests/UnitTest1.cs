@@ -6,6 +6,8 @@ using PTStorage.Equipment.Cable;
 using PTStorage.Equipment.Clock;
 using PTStorage.Equipment.Sedov;
 using PTStorage.Equipment.Misc;
+using PTStorage.Options;
+using System.Collections.Generic;
 
 namespace UnitTests
 {
@@ -29,7 +31,13 @@ namespace UnitTests
         [TestMethod]
         public void CreateParametrizedSetrverTest()
         {
-            Server server = new Server("Test","SimpleTest",2,8);
+            List<Option> t = new List<Option>();
+            t.Add(OptionManager.GetOption("AD10-AD10"));
+            t.Add(OptionManager.GetOption("GNS-HQ"));
+            t.Add(OptionManager.GetOption("TC-2-2"));
+            t.Add(OptionManager.GetOption("LNE"));
+            t.Sort();
+            Server server = new Server("Test","SimpleTest",2,8,t);
             Assert.AreEqual("Test", server.Name);
             Assert.AreEqual("SimpleTest", server.Description);
             Assert.AreEqual(2, server.EntryPrice);
@@ -112,9 +120,15 @@ namespace UnitTests
         [TestMethod]
         public void VerificationConstructorTest()
         {
-            Server server = new Server("Test", "SimpleTest", 2, 8);
+            List<Option> t = new List<Option>();
+            t.Add(OptionManager.GetOption("AD10-AD10"));
+            t.Add(OptionManager.GetOption("GNS-HQ"));
+            t.Add(OptionManager.GetOption("TC-2-2"));
+            t.Add(OptionManager.GetOption("LNE"));
+            t.Sort();
+            Server server = new Server("Test", "SimpleTest", 2, 8,t);
             Assert.AreEqual(false, server.PossibilityOfVerification);
-            server=new Server("Test", "SimpleTest", 2, 8, true);
+            server=new Server("Test", "SimpleTest", 2, 8,t, true);
             Assert.AreEqual(true, server.PossibilityOfVerification);
 
             SedovServer sedovServer = new SedovServer("Test", "SimpleTest", 2, 8);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PTStorage.Options;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,16 @@ namespace PTStorage.Equipment.Meinberg
     public class Server : BaseEquip
     {
         bool possibilityOfVerification;
+        List<Option> options;
 
         public Server()
         {
+            options = new List<Option>();
         }
-        
-        public Server(string name, string description, double ePrice, double price, bool verification=false) : base(name, description, ePrice, price)
+
+        public Server(string name, string description, double ePrice, double price, List<Option> ops, bool verification=false) : base(name, description, ePrice, price)
         {
+            options = ops;
             PossibilityOfVerification = verification;
         }
 

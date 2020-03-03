@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PTStorage;
 using PTStorage.Equipment;
@@ -7,6 +8,7 @@ using PTStorage.Equipment.Cable;
 using PTStorage.Equipment.Clock;
 using PTStorage.Equipment.Meinberg;
 using PTStorage.Equipment.Sedov;
+using PTStorage.Options;
 
 namespace UnitTests
 {
@@ -53,11 +55,15 @@ namespace UnitTests
         public void PreNameTest()
         {
             Assortment assortment = new Assortment();
-
-            assortment.AddElement(new Server("Test", "SimpleTest", 2, 8));
+            List<Option> t = new List<Option>();
+            t.Add(OptionManager.GetOption("AD10-AD10"));
+            t.Add(OptionManager.GetOption("GNS-HQ"));
+            t.Add(OptionManager.GetOption("TC-2-2"));
+            t.Add(OptionManager.GetOption("LNE"));
+            assortment.AddElement(new Server("Test", "SimpleTest", 2, 8,t));
             Assert.AreEqual(PreName.STV+"Test", assortment.Servers[0].Name);
 
-            assortment.AddElement(new Server("Test", "SimpleTest", 2, 8, true));
+            assortment.AddElement(new Server("Test", "SimpleTest", 2, 8, t,true));
             Assert.AreEqual(PreName.USCHV + "Test", assortment.Servers[1].Name);
 
             assortment.AddElement(new Antenna("Test", "SimpleTest", 2, 8));
