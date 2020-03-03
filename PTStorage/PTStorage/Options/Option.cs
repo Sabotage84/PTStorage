@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PTStorage.Options
 {
-    public class Option
+    public class Option:IComparable
     {
-        public int ID;
+        private int iD;
         string shortName;
         int count;
         string fullName;
@@ -16,13 +16,14 @@ namespace PTStorage.Options
         public string ShortName { get => shortName; set => shortName = value; }
         public int Count { get => count; set => count = value; }
         public string FullName { get => fullName; set => fullName = value; }
+        public int ID { get => iD; set => iD = value; }
 
         public Option()
         {
 
         }
 
-        public Option(string name, int count=1)
+        public Option(string name, int id, int count=1)
         { 
             Count = count;
             ShortName = name;
@@ -65,6 +66,17 @@ namespace PTStorage.Options
             hashCode = hashCode * -1521134295 + count.GetHashCode();
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(fullName);
             return hashCode;
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj is Option)
+            {
+                Option t = (Option)obj;
+                return t.ID - ID;
+            }
+            else
+                throw new ArgumentException();
         }
     }
 }

@@ -44,22 +44,22 @@ namespace PTStorage.Options
 
         private static void LoadDefaultOptions()
         {
-            AllOptions.Add(new Option("TC"));
-            AllOptions.Add(new Option("TC", 2));
-            AllOptions.Add(new Option("TC", 3));
-            AllOptions.Add(new Option("TC", 4));
-            AllOptions.Add(new Option("LNE"));
-            AllOptions.Add(new Option("LNE", 2));
-            AllOptions.Add(new Option("FS"));
-            AllOptions.Add(new Option("FS", 2));
-            AllOptions.Add(new Option("FS", 3));
-            AllOptions.Add(new Option("FS", 4));
-            AllOptions.Add(new Option("PS"));
-            AllOptions.Add(new Option("PS", 2));
-            AllOptions.Add(new Option("PS", 3));
-            AllOptions.Add(new Option("PS", 4));
-            AllOptions.Add(new Option("GE"));
-            AllOptions.Add(new Option("GE", 3));
+            AllOptions.Add(new Option("TC",2500));
+            AllOptions.Add(new Option("TC",2500, 2));
+            AllOptions.Add(new Option("TC",2500, 3));
+            AllOptions.Add(new Option("TC",2500, 4));
+            AllOptions.Add(new Option("LNE",2000));
+            AllOptions.Add(new Option("LNE",2000, 2));
+            AllOptions.Add(new Option("FS",3000));
+            AllOptions.Add(new Option("FS",3000, 2));
+            AllOptions.Add(new Option("FS",3000, 3));
+            AllOptions.Add(new Option("FS",3000, 4));
+            AllOptions.Add(new Option("PS",3000));
+            AllOptions.Add(new Option("PS", 3000, 2));
+            AllOptions.Add(new Option("PS", 3000, 3));
+            AllOptions.Add(new Option("PS", 3000, 4));
+            AllOptions.Add(new Option("GE", 3000));
+            AllOptions.Add(new Option("GE", 3000, 3));
 
         }
 
@@ -123,7 +123,7 @@ namespace PTStorage.Options
             {
                 res += item.FullName + "/";
             }
-            return res;
+            return res.Substring(0,res.Length-1);
         }
     }
 }

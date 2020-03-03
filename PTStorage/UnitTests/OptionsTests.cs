@@ -12,15 +12,15 @@ namespace UnitTests
         public void OptionCtorTest()
         {
             Option option = new Option();
-            Option op = new Option("TC", 2);
+            Option op = new Option("TC",2500, 2);
             Assert.AreEqual("TC-2-2", op.FullName);
-            op= new Option ("LNE",2);
+            op= new Option ("LNE",2000,2);
             Assert.AreEqual("2LNE", op.FullName);
-            op = new Option("GE", 3);
+            op = new Option("GE",3000, 3);
             Assert.AreEqual("3GE", op.FullName);
-            op = new Option("FS", 2);
+            op = new Option("FS",3000, 2);
             Assert.AreEqual("FS-2", op.FullName);
-            op = new Option("TC");
+            op = new Option("TC",2500);
             Assert.AreEqual("TC-1-1", op.FullName);
         }
 
@@ -43,9 +43,9 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             int t = OptionManager.AllOptions.Count;
-            OptionManager.AddOption(new Option("GNS-HQ"));
+            OptionManager.AddOption(new Option("GNS-HQ",1000));
             Assert.AreEqual(t+1, OptionManager.AllOptions.Count);
-            OptionManager.AddOption(new Option("GNS-HQ"));
+            OptionManager.AddOption(new Option("GNS-HQ",1000));
             Assert.AreEqual(t + 1, OptionManager.AllOptions.Count);
             OptionManager.RemoveOption("GNS-HQ");
         }
@@ -55,7 +55,7 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             int t = OptionManager.AllOptions.Count;
-            OptionManager.AddOption(new Option("GNS-HQ"));
+            OptionManager.AddOption(new Option("GNS-HQ",1000));
             Assert.AreEqual(t + 1, OptionManager.AllOptions.Count);
             OptionManager.RemoveOption("GNS-HQ");
             Assert.AreEqual(t, OptionManager.AllOptions.Count);
@@ -73,7 +73,7 @@ namespace UnitTests
         public void FindOptionTest()
         {
             OptionManager.TestMeth();
-            OptionManager.AddOption(new Option("test"));
+            OptionManager.AddOption(new Option("test",9999));
             Option t = OptionManager.GetOption("test");
             Assert.AreEqual("test", t.FullName);
         }
@@ -85,6 +85,7 @@ namespace UnitTests
             List<Option> t = new List<Option>();
             t.Add(OptionManager.GetOption("TC-2-2"));
             t.Add(OptionManager.GetOption("LNE"));
+            t.Sort();
             string s= OptionManager.GetFullOptionName(t);
             Assert.AreEqual(@"LNE/TC-2-2", s);
         }
