@@ -28,7 +28,7 @@ namespace UnitTests
         public void OptionLoadTest()
         {
             OptionManager.TestMeth();
-            Assert.AreEqual(10, OptionManager.AllOptions.Count);
+            Assert.AreEqual(17, OptionManager.AllOptions.Count);
         }
 
         //[TestMethod]
@@ -66,7 +66,7 @@ namespace UnitTests
         {
             OptionManager.TestMeth();
             List<Option> t= OptionManager.FindAllOptionsLike("TC");
-            Assert.AreEqual(3, t.Count);
+            Assert.AreEqual(4, t.Count);
         }
 
         [TestMethod]

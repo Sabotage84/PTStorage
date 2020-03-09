@@ -60,7 +60,7 @@ namespace PTStorage.Options
             AllOptions.Add(new Option("PS", 3000, 4));
             AllOptions.Add(new Option("GE", 3000));
             AllOptions.Add(new Option("GE", 3000, 3));
-
+            SaveAllOptions();
         }
 
         static public void SaveAllOptions()
