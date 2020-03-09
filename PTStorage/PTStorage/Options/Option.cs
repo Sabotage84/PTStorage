@@ -27,6 +27,7 @@ namespace PTStorage.Options
         { 
             Count = count;
             ShortName = name;
+            ID = id;
             if (Count < 2)
             {
                 if (ShortName == "TC")

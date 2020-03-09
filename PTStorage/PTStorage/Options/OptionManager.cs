@@ -44,6 +44,8 @@ namespace PTStorage.Options
 
         private static void LoadDefaultOptions()
         {
+            AllOptions.Add(new Option("GNS-HQ", 1000));
+            AllOptions.Add(new Option("AD10-AD10", 9000));
             AllOptions.Add(new Option("TC",2500));
             AllOptions.Add(new Option("TC",2500, 2));
             AllOptions.Add(new Option("TC",2500, 3));
@@ -113,7 +115,11 @@ namespace PTStorage.Options
 
         public static Option GetOption(string fullName)
         {
-            return AllOptions.Find(x => x.FullName == fullName);
+            var t=AllOptions.Find(x => x.FullName == fullName);
+            if (t != null)
+                return t;
+            else
+                return new Option("NO SUCH OPTIN", 9999);
         }
 
         public static string GetFullOptionName(List<Option> options)

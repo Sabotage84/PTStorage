@@ -28,7 +28,7 @@ namespace UnitTests
         public void OptionLoadTest()
         {
             OptionManager.TestMeth();
-            Assert.AreEqual(17, OptionManager.AllOptions.Count);
+            Assert.AreEqual(19, OptionManager.AllOptions.Count);
         }
 
         //[TestMethod]
