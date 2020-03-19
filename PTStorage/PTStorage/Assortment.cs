@@ -143,5 +143,13 @@ namespace PTStorage
             return res;
         }
 
+        public List<BaseEquip> FindAny(string findStr)
+        {
+            List<BaseEquip> res = new List<BaseEquip>();
+            res.AddRange(FindByName(findStr));
+            res.AddRange(FindByDescription(findStr));
+            return res;
+        }
+
     }
 }
