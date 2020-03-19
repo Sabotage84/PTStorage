@@ -51,7 +51,7 @@ namespace PTStorage
         public List<SedovServer> SedovServers { get => sedovServers; set => sedovServers = value; }
         public List<Misc> Miscs { get => miscs; set => miscs = value; }
 
-        public void AddElement(BaseEquip eq)
+        public void AddEquipment(BaseEquip eq)
         {
             if (eq is Server)
             {
@@ -110,6 +110,23 @@ namespace PTStorage
                 Miscs.Add((Misc)eq);
                 Miscs.Sort();
             }
+
+        }
+
+        public List<BaseEquip> FindByName(string findStr)
+        {
+            List<BaseEquip> res = new List<BaseEquip>();
+            res.AddRange(Servers.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Antennas.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Cables.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Clocks.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Converters.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Receivers.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Sdus.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(SedovServers.FindAll((x) => x.Name.Contains(findStr)));
+            res.AddRange(Miscs.FindAll((x) => x.Name.Contains(findStr)));
+
+            return res;
 
         }
 
