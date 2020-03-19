@@ -125,9 +125,22 @@ namespace PTStorage
             res.AddRange(Sdus.FindAll((x) => x.Name.Contains(findStr)));
             res.AddRange(SedovServers.FindAll((x) => x.Name.Contains(findStr)));
             res.AddRange(Miscs.FindAll((x) => x.Name.Contains(findStr)));
-
             return res;
+        }
 
+        public List<BaseEquip> FindByDescription(string findStr)
+        {
+            List<BaseEquip> res = new List<BaseEquip>();
+            res.AddRange(Servers.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Antennas.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Cables.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Clocks.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Converters.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Receivers.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Sdus.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(SedovServers.FindAll((x) => x.Description.Contains(findStr)));
+            res.AddRange(Miscs.FindAll((x) => x.Description.Contains(findStr)));
+            return res;
         }
 
     }
